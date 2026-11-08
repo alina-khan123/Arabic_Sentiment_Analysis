@@ -1,0 +1,2 @@
+framework,model,strategy,accuracy,macro_f1,precision,recall
+TensorFlow/Keras,xlm-roberta-base,Full Fine-Tuning,0.6025,0.5764,0.571,0.6134

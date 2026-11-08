@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Sentiment Dashboard</title>
+    <!-- Modern Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="dashboard-container">
+        <header>
+            <h1>Arabic Sentiment Analysis</h1>
+            <p>Interactive dashboard for data exploration and live model testing</p>
+        </header>
+
+        <main>
+            <section class="glass-card" id="eda-section">
+                <h2>Dataset Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>Total Samples (High-Quality)</h3>
+                        <p id="total-samples">Loading...</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="sentimentChart"></canvas>
+                </div>
+            </section>
+
+            <section class="glass-card" id="prediction-section">
+                <h2>Test Live Model</h2>
+                <div class="form-group">
+                    <textarea id="text-input" placeholder="Type Arabic text here to analyze its sentiment..." rows="5"></textarea>
+                    <button id="analyze-btn">
+                        <span class="btn-text">Analyze Sentiment</span>
+                        <div class="spinner hidden" id="loading-spinner"></div>
+                    </button>
+                </div>
+                <div id="result-box" class="hidden">
+                    <h3>Result:</h3>
+                    <div class="result-details">
+                        <span id="pred-label" class="badge"></span>
+                        <span id="pred-score"></span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

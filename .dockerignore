@@ -1,0 +1,10 @@
+**/__pycache__
+**/.pytest_cache
+**/venv
+**/.git
+**/.DS_Store
+dashboard/venv
+*.ipynb
+jais_fullft_model/
+jais_lora_model/
+docker/

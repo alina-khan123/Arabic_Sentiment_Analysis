@@ -1,0 +1,2 @@
+framework,model,strategy,accuracy,macro_f1,precision,recall,trainable_pct
+TensorFlow/Keras,xlm-roberta-base,LoRA (frozen base + classifier head),0.5853,0.4176,0.5335,0.4257,0.2132
